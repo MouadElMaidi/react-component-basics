@@ -1,13 +1,14 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
+  const { title, image, description } = props.concept;
+
   return (
-    <div>Card</div>
-    // <li className="concept">
-    //   <img src="TODO: IMAGE" alt="TODO: TITLE" />
-    //   <h2>TODO: TITLE</h2>
-    //   <p>TODO: DESCRIPTION</p>
-    // </li>
+    <li className="concept">
+      <img src={image} alt={title} />
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </li>
   );
 };
 
